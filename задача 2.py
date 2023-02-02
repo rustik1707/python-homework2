@@ -9,9 +9,12 @@
 
 S = int(input('введите сумму двух чисел: '))
 P = int(input('введите произведение двух чисел: '))
-from random import randint
-X = randint(1,1000)
-Y =randint(1,1000)
-if S-Y==P/Y and S-X==P/X:
-    print(f'X равен {X}, Y равен {Y}')
-else: print('таких чисел X и Y нет')
+D = S*S-4*P
+import math
+if D == 0:
+    Y = -(-S/2)
+else:
+    Y = (S + math.sqrt(D))/2
+
+X = S - Y
+print(X,Y)
