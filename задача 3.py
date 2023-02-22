@@ -5,7 +5,7 @@
 N = int(input('введите число: '))
 
 m = 1
-while m < N:
+while m <= N:
     print (m,end=' ')
     m = m * 2
 
